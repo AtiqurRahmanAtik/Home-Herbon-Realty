@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+
 import './index.css';
 
 import {
@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
 import Home from './Components/Home/Home.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
+import Login from './Components/Login/Login.jsx';
+import Register from './Components/Register/Register.jsx';
 
 
 
@@ -16,11 +19,20 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement : <ErrorPage></ErrorPage>,
     children: [
       {
         path : '/',
         element : <Home></Home>
       },
+      {
+        path: '/login',
+        element : <Login></Login>
+      },
+      {
+        path: '/register',
+        element : <Register></Register>
+      }
     ]
   },
 ]);

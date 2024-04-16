@@ -1,12 +1,12 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import photo from "../../assets/Images/user.png";
 
 const NavigationBar = () => {
 
   const Links = <>
 
         <li><NavLink to='/'>Home </NavLink></li>
-        <li><NavLink>Item 1</NavLink></li>
+        <li><NavLink >Item 1</NavLink></li>
     
   </> 
     return (
@@ -34,7 +34,14 @@ const NavigationBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+
+  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img alt="Tailwind CSS Navbar component" src={photo} />
+        </div>
+      </div>
+
+    <Link to='/login' className="btn">Login</Link>
   </div>
 </div>
       

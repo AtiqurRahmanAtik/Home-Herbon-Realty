@@ -6,7 +6,7 @@ import NavigationBar from "../Navbar/NavigationBar";
 
 const Home = () => {
     return (
-        <div >
+        <div className="container mx-auto">
             
             <div className="space-y-11">
 
