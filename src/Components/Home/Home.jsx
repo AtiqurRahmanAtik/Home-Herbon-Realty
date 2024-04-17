@@ -1,4 +1,5 @@
-import Footer from "../Footer/Footer";
+
+import Banner from "../Banner/Banner";
 import NavigationBar from "../Navbar/NavigationBar";
 
 
@@ -11,7 +12,8 @@ const Home = () => {
             <div className="space-y-11">
 
            <NavigationBar></NavigationBar>
-           <Footer></Footer>
+           <Banner></Banner>
+          
             </div>
          
         </div>

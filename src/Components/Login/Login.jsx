@@ -21,6 +21,8 @@ const Login = () => {
                 console.log(error);
                 setError(error.message);
             });
+
+            setError("");
     };
 
 

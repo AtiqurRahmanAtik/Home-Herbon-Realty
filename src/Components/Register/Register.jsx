@@ -22,8 +22,26 @@ const Register = () => {
         registerUser(email,password)
         .then(result =>{
             console.log(result);
-            setError("Register Successfully ")
+           
         })
+        .catch(error =>{
+           console.log(error);
+        })
+
+        setError(""); 
+        
+        if(password.length <6 ){
+            setError('password must be 6 characters');
+            return;
+        }
+
+       else if(!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)){
+            setError('Must have an Uppercase and LowerCase letter in the password');
+            return;
+        }
+        
+        setError("Register Successfully ");
+       
       };
 
 

@@ -1,8 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import photo from "../../assets/Images/user.png";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const NavigationBar = () => {
+
+  const {user, LogOut} = useContext(AuthContext);
+
+  //handlesingout
+  const handleSingOut = ()=>{
+    LogOut()
+    .then()
+    .catch()
+  }
 
   const Links = <>
 
@@ -43,8 +54,22 @@ const NavigationBar = () => {
           <img alt="Tailwind CSS Navbar component" src={photo} />
         </div>
       </div>
+      {
+        user ? <div>
+            <span>{user.email}</span>
+           <img className="w-44" src={user.photo} alt="" />
+           <button onClick={handleSingOut} className="btn">Sing Out</button>
+        </div> :
 
-    <Link to='/login' className="btn">Login</Link>
+        <Link to='/login'>
+        <button  className="btn">Login</button>
+        </Link>
+       
+        
+      }
+
+ 
+
   </div>
 </div>
       
