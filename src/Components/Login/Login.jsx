@@ -5,7 +5,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-    const { signInUser, googleUser } = useContext(AuthContext);
+    const { signInUser, googleUser,  facebookUser } = useContext(AuthContext);
     const [error, setError] = useState(null);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -23,6 +23,8 @@ const Login = () => {
             });
     };
 
+
+    //google user
     const handleGoogleLogin = () => {
         googleUser()
             .then(result => {
@@ -30,9 +32,25 @@ const Login = () => {
             })
             .catch(error => {
                 console.log(error);
-                setError(error.message); // Set error if Google authentication fails
+                setError(error.message); 
             });
     };
+
+
+    // facebook user
+    const handleFacebookLogin = () => {
+       facebookUser()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error);
+                setError(error.message); 
+            });
+    };
+
+
+
 
     return (
         <div className="container mx-auto">
@@ -78,13 +96,13 @@ const Login = () => {
                     </div>
 
 
+                </form>
                     <div className="my-4 space-y-3 text-center ">
                         <h2 className="text-xl font-bold"> <hr /> Social login</h2>
                 <button onClick={handleGoogleLogin} className="btn btn-accent">Google</button>
 
-                <button className="btn btn-primary mx-3">faceBook</button>
+                <button onClick={handleFacebookLogin} className="btn btn-primary mx-3">faceBook</button>
                     </div>
-                </form>
 
             </div>
         </div>
