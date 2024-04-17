@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import photo from "../../assets/Images/user.png";
+import { MdOutlineRealEstateAgent } from "react-icons/md";
 
 const NavigationBar = () => {
 
@@ -24,7 +25,9 @@ const NavigationBar = () => {
       </ul>
 
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <Link to='/'> <MdOutlineRealEstateAgent className="text-5xl"></MdOutlineRealEstateAgent></Link>
+   
+    <a className="btn btn-ghost text-xl">Home  <br /> Harbor Realty</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 space-x-3">
