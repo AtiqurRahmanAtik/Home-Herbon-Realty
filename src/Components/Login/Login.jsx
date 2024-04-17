@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavigationBar from "../Navbar/NavigationBar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -8,6 +8,11 @@ const Login = () => {
     const { signInUser, googleUser,  facebookUser } = useContext(AuthContext);
     const [error, setError] = useState(null);
 
+    const location = useLocation();
+    console.log(location);
+
+    const Navigate = useNavigate();
+
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
@@ -16,6 +21,8 @@ const Login = () => {
             .then(result => {
                 console.log(result);
                 setError('Successful login');
+
+                Navigate(location?.state ? location.state : '/' )
             })
             .catch(error => {
                 console.log(error);

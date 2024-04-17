@@ -26,7 +26,7 @@ const Home = () => {
                 <h2 className="font-bold text-3xl text-black text-center">Real Estate Property Category </h2>
             </div>
 
-            <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-7 lg:grid-cols-3">
                 {
                     categories.map((item) => <Category key={item.id} item={item}></Category>)
                 }

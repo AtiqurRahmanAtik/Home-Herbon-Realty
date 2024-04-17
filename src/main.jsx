@@ -13,6 +13,8 @@ import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
+import CategoryDetails from './Components/CategoryDetails/CategoryDetails.jsx';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
 
 
 
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
         path : '/',
         element : <Home></Home>,
         loader : ()=> fetch('/FakeData.json')
+      },
+      {
+        path: '/category/:id',
+        element : <PrivateRoute> <CategoryDetails></CategoryDetails> </PrivateRoute>
       },
       {
         path: '/login',

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Category = ({item}) => {
@@ -5,8 +6,7 @@ const Category = ({item}) => {
     console.log(item);
 
     const {estate_title,segment_name,description,acilities
-,image,location,price,status,facilities
-} =item;
+,image,location,price,status,facilities,id} =item;
 
 
     return (
@@ -14,7 +14,7 @@ const Category = ({item}) => {
 
             <div className="card  bg-base-100 shadow-xl">
   <figure><img className="w-full lg:w-96 h-96" src={image} alt="Shoes" /></figure>
-  <div className="card-body">
+  <div className="card-body space-y-3">
     <h2 className="card-title text-2xl font-bold text-blue-800 text-center">{estate_title}</h2>
     <p> <span className="text-2xl font-bold text-black"> description : </span> {description}</p>
     <h2 className="text-xl font-normal text-black "><span className="text-2xl  text-black font-bold">Category :</span>   {segment_name}</h2>
@@ -24,8 +24,8 @@ const Category = ({item}) => {
     <h2 className="text-xl  text-black "> <span className="text-2xl  text-black "> <span className="text-2xl  text-black font-bold">Location :</span>  {location} </span></h2>
 
 
-      <div className="flex gap-1">
-        <h2 className="text-2xl font-bold">Facilities : </h2>
+      <div className="flex gap-3">
+        <h2 className="text-2xl font-bold">Facilities  </h2>
         {
           facilities.map((item) => <p key={item}>{item}</p>
         )
@@ -36,6 +36,10 @@ const Category = ({item}) => {
 
     <h2 className="text-xl font-normal text-black"> <span className="text-2xl font-normal text-black">Status : {status}</span></h2>
     <h2 className="text-xl font-normal text-black"> <span className="text-2xl font-normal text-black">Price : {price}</span></h2>
+    </div>
+
+    <div className="card-actions ">
+     <Link to={`/category/${id}`}> <button className="btn btn-primary">View Property</button> </Link> 
     </div>
 
    
