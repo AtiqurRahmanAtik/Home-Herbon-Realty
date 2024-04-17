@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import NavigationBar from "../Navbar/NavigationBar";
-import {  useState } from "react";
-
+import { useContext, useState } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
-import UseAuth from "../Hooks/UseAuth";
 
 
 const Register = () => {
 
     const [error,setError] = useState(null);
 
-    const { registerUser} = UseAuth();
+    const { registerUser} = useContext(AuthContext);
    
 
 
