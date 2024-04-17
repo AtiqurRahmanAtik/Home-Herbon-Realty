@@ -1,0 +1,60 @@
+ [
+   
+      {
+        "estate_title": "Cosy Family Home in Suburban Paradise",
+        "id": 1,
+        "segment_name": "Residential",
+        "description": "This charming family home is nestled in a quiet suburban neighborhood, offering peace and serenity. With spacious rooms and a lush backyard, it's perfect for creating lasting memories with loved ones.",
+        "price": "$3,500/month",
+        "status": "rent",
+        "area": "2500 sqft",
+        "location": "Green Valley Estates, Denver, Colorado",
+        "facilities": ["Cozy living room", "Backyard garden", "Modern kitchen", "Home office"],
+       
+        "image": "https://i.ibb.co/5B0PdX5/costly-House.jpg"
+      },
+      {
+        "estate_title": "Modern Townhouse Living in Urban Oasis",
+        "id": 2,
+        "segment_name": "Townhouses",
+        "description": "Discover contemporary townhouse living in the heart of the city's most vibrant neighborhood. This modern townhouse boasts sleek design and high-end finishes, offering the perfect blend of style and convenience.",
+        "price": "$1,800,000",
+        "status": "sale",
+        "area": "2200 sqft",
+        "location": "Metro Heights, Brooklyn, New York",
+        "facilities": ["Spacious living area", "Rooftop terrace", "Gourmet kitchen", "Private garage"],
+        
+        "image": "https://i.ibb.co/4gGRm6W/townhouse.jpg"
+      },
+
+       {
+        "estate_title": "Modern Waterfront Apartment with Panoramic Views",
+        "id": 3,
+        "segment_name": "Apartments",
+        "description": "Enjoy waterfront living in this modern apartment offering panoramic views of the bay. With luxurious amenities and contemporary design, it's the perfect blend of comfort and elegance.",
+        "price": "$2,000,000",
+        "status": "sale",
+        "area": "2200 sqft",
+        "location": "Harbor View Residences, Miami, Florida",
+        "facilities": ["Private balcony", "Infinity pool", "Fitness center", "Concierge service"],
+       
+        "image": "https://i.ibb.co/T2Dwndq/water-HOuse.jpg"
+      },
+
+      {
+      "estate_title": "Modern Student Apartments near Campus",
+      "id": 4,
+      "segment_name": "Student Housing",
+      "description": "These modern student apartments are located just steps away from the university campus, offering convenience and comfort to students. With contemporary design and shared amenities, it's the perfect place for student living.",
+      "price": "$1,200/month",
+      "status": "rent",
+      "area": "600 sqft",
+      "location": "University District, Boston, Massachusetts",
+      "facilities": ["Fully furnished", "Study lounge", "Fitness center", "Laundry facilities"],
+     
+      "image": "https://i.ibb.co/09frXjZ/campus.jpg"
+    }
+    
+    ]
+  
+  
