@@ -4,14 +4,16 @@ import { getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+
+console.log(import.meta.env.VITE_PASE)
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB2kpGLtj89dcb7ul3QanGk26kFXifxLFM",
-  authDomain: "real-estate-project-e543c.firebaseapp.com",
-  projectId: "real-estate-project-e543c",
-  storageBucket: "real-estate-project-e543c.appspot.com",
-  messagingSenderId: "936444219199",
-  appId: "1:936444219199:web:cf5009d12f20efe5f34d8a"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJETID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKT,
+  messagingSenderId: import.meta.env.ITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
