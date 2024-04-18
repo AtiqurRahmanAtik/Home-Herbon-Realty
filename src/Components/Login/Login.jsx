@@ -11,7 +11,7 @@ const Login = () => {
     const location = useLocation();
     console.log(location);
 
-    const Navigate = useNavigate();
+    const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -20,16 +20,20 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result);
-                setError('Successful login');
 
-                Navigate(location?.state ? location.state : '/' )
+                setError('Successful login');
+                if(result.user){
+                    
+                    navigate(location?.state? location.state : '/' );
+                    }
+              
             })
             .catch(error => {
                 console.log(error);
                 setError(error.message);
             });
 
-            setError("");
+            // setError("");
     };
 
 
@@ -37,7 +41,11 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleUser()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
+                if(result.user){
+                    
+                navigate(location?.state? location.state : '/' );
+                }
             })
             .catch(error => {
                 console.log(error);
@@ -50,7 +58,11 @@ const Login = () => {
     const handleFacebookLogin = () => {
        facebookUser()
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
+                if(result.user){
+                    
+                    navigate(location?.state? location.state : '/' );
+                    }
             })
             .catch(error => {
                 console.log(error);

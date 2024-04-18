@@ -39,7 +39,7 @@ const Category = ({item}) => {
     </div>
 
     <div className="card-actions ">
-     <Link to={`/category/${id}`}> <button className="btn btn-primary">View Property</button> </Link> 
+     <Link to={`/category/${id}`} > <button className="btn btn-primary">View Property</button> </Link> 
     </div>
 
    

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavigationBar from "../Navbar/NavigationBar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -9,7 +9,12 @@ const Register = () => {
 
     const [error,setError] = useState(null);
 
-    const { registerUser} = useContext(AuthContext);
+    const location = useLocation();
+    console.log(location);
+
+    const navigate = useNavigate();
+
+    const { registerUser, undateUserProfile} = useContext(AuthContext);
    
 
 
@@ -18,10 +23,18 @@ const Register = () => {
       } = useForm()
     
       const onSubmit = (data) =>{
-        const {email,password} = data
+        const {email,password,Photo,FullName} = data
         registerUser(email,password)
         .then(result =>{
             console.log(result);
+
+            undateUserProfile(FullName,Photo)
+            .then(() =>{
+   navigate(location?.state? location.state : '/' );
+        
+  })
+
+            
            
         })
         .catch(error =>{

@@ -53,7 +53,34 @@
       "facilities": ["Fully furnished", "Study lounge", "Fitness center", "Laundry facilities"],
      
       "image": "https://i.ibb.co/09frXjZ/campus.jpg"
+    },
+    {
+      "estate_title": "Senior Apartments with Assisted Living Services",
+      "id":5,
+      "segment_name": "Senior Living Communities",
+      "description": "These senior apartments offer assisted living services and a supportive community for residents. With personalized care plans and a range of amenities, it's the ideal place for seniors seeking comfort and security.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1500 sqft",
+      "location": "Graceful Living Estates, Phoenix, Arizona",
+      "facilities": ["24-hour staff", "Medication management", "Scheduled transportation", "Daily activities"],
+   
+      "image": "https://i.ibb.co/m8Pkg3p/sinenor.jpg,"
+    },
+    {
+      "estate_title": "Modern Condo with Ocean View",
+      "id": 6,
+      "segment_name": "Residential",
+      "description": "Enjoy luxury living in this modern condo with breathtaking ocean views. With upscale amenities and a prime location, it's the perfect retreat for a relaxing vacation.",
+      "price": "$300/night",
+      "status": "rent",
+      "area": "1000 sqft",
+      "location": "Coastal Retreat, Maui, Hawaii",
+      "facilities": ["Balcony with ocean view", "Infinity pool", "Fitness center", "Fully equipped kitchen"],
+   
+      "image": "https://i.ibb.co/zQ60gS9/vecation.jpg"
     }
+
     
     ]
   

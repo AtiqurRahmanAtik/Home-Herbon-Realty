@@ -15,6 +15,9 @@ import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Components/AuthProvider/AuthProvider.jsx';
 import CategoryDetails from './Components/CategoryDetails/CategoryDetails.jsx';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.jsx';
+import About from './Components/About/About.jsx';
+import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute.jsx';
+import UpdateProfile from './Components/UpdateProfile/UpdateProfile.jsx';
 
 
 
@@ -31,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/category/:id',
-        element : <PrivateRoute> <CategoryDetails></CategoryDetails> </PrivateRoute>
+        element : <PrivateRoute> 
+
+          <CategoryDetails></CategoryDetails>
+
+         </PrivateRoute>
       },
       {
         path: '/login',
@@ -40,6 +47,16 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element : <Register></Register>
+      },
+      {
+        path: '/about',
+        element : <ProtectedRoute>
+          <About></About>
+        </ProtectedRoute>
+      },
+      {
+        path:'/updateProfile',
+        element : <UpdateProfile></UpdateProfile>
       }
     ]
   },

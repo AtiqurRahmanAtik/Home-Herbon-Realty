@@ -18,7 +18,12 @@ const NavigationBar = () => {
   const Links = <>
 
         <li><NavLink to='/'>Home </NavLink></li>
-        <li><NavLink >Item 1</NavLink></li>
+        <li><NavLink to={'/updateProfile'}>Update Profile</NavLink></li>
+        
+        {
+          user && <li><NavLink to='/about'>About</NavLink></li> 
+        }
+       
     
   </> 
     return (
@@ -49,16 +54,24 @@ const NavigationBar = () => {
   </div>
   <div className="navbar-end">
 
-  <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+  {/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img alt="Tailwind CSS Navbar component" src={photo} />
         </div>
-      </div>
+      </div> */}
+      
+      
       {
-        user ? <div>
+        user ? <div className="lg:flex items-center gap-2">
             <span>{user.email}</span>
-           <img className="w-44" src={user.photo} alt="" />
+       
+ <div className="tooltip" data-tip={user.displayName}>
+           <img className="w-11 rounded-full" src={user?.photoURL || {photo}} alt="" />
+</div>
+
            <button onClick={handleSingOut} className="btn">Sing Out</button>
+
+           
         </div> :
 
         <Link to='/login'>
