@@ -23,20 +23,21 @@ const Category = ({item}) => {
 
     <h2 className="text-xl  text-black "> <span className="text-2xl  text-black "> <span className="text-2xl  text-black font-bold">Location :</span>  {location} </span></h2>
 
-
+{/* 
       <div className="flex gap-3">
         <h2 className="text-2xl font-bold">Facilities  </h2>
         {
           facilities.map((item) => <p key={item}>{item}</p>
         )
         }
-      </div>
+      </div> */}
 
-    <div className="flex justify-around">
+    {/* <div className="flex justify-around">
 
     <h2 className="text-xl font-normal text-black"> <span className="text-2xl font-normal text-black">Status : {status}</span></h2>
+    </div> */}
+    
     <h2 className="text-xl font-normal text-black"> <span className="text-2xl font-normal text-black">Price : {price}</span></h2>
-    </div>
 
     <div className="card-actions ">
      <Link to={`/category/${id}`} > <button className="btn btn-primary">View Property</button> </Link> 

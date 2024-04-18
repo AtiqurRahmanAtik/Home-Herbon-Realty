@@ -23,7 +23,7 @@ const NavigationBar = () => {
         {
           user && <li><NavLink to='/about'>About</NavLink></li> 
         }
-       
+      
     
   </> 
     return (
@@ -61,8 +61,10 @@ const NavigationBar = () => {
       </div> */}
       
       
-      {
-        user ? <div className="lg:flex items-center gap-2">
+    <div>
+      
+    {
+        user ? <div className="hidden lg:flex items-center gap-2">
             <span>{user.email}</span>
        
  <div className="tooltip" data-tip={user.displayName}>
@@ -80,6 +82,9 @@ const NavigationBar = () => {
        
         
       }
+
+      </div>  
+   
 
  
 
