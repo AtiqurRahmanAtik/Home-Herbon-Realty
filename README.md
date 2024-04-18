@@ -20,4 +20,8 @@ Developers buy land, finance real estate deals, build or have builders build pro
  -  Create a 404 page/ not found page
 ## #npm package 
 -  React Hook form
+<<<<<<< HEAD
 -  Swiper slider
+=======
+-  Swiper slider
+>>>>>>> 2dcd540fda9de29c06cef6d4edec81ae9ddd4ea1
