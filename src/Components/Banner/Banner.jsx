@@ -7,8 +7,7 @@ import photo_3 from '../../assets/Images/campusss.jpg';
 import photo_4 from '../../assets/Images/sinenor.jpg';
 import photo_5 from '../../assets/Images/vecation.jpg';
 
-import 'swiper/css';
-
+import 'swiper/css'
 const Banner = () => {
     return (
      <div className="space-y-9 bg-gray-300 py-7">
