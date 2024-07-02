@@ -24,4 +24,4 @@ Developers buy land, finance real estate deals, build or have builders build pro
 -  Swiper slider
 =======
 -  Swiper slider
->>>>>>> 2dcd540fda9de29c06cef6d4edec81ae9ddd4ea1
+
