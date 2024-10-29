@@ -81,7 +81,7 @@ const Login = () => {
                 <h2 className="text-2xl font-bold text-center">Please Login Here</h2>
 
 
-                <h2 className="text-2xl font-bold text-center">Please Login Here</h2>
+           
 
 
                 <form onSubmit={handleSubmit(onSubmit)} className="md:w-2/4 lg:w-2/4 mx-auto">
