@@ -79,6 +79,8 @@ const Login = () => {
 
             <div className="my-11 space-y-7">
                 <h2 className="text-2xl font-bold text-center">Please Login Here</h2>
+                
+                <h2 className="text-2xl font-bold text-center">Please Login Here</h2>
 
 
              
